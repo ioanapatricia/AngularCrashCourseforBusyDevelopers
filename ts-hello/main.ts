@@ -1,20 +1,19 @@
-interface Point {
-    x: number,
-    y: number
+class Point {
+    //fields
+    x: number; 
+    y: number;
+
+    //methods
+    draw() {
+        console.log('X: ' + this.x + ',Y: ' + this.y);
+    }
+
+    getDistance(another: Point) {
+        // ...
+    }
 }
 
-
-// let drawPoint = (point: { x: number, y: number}) => {
-    // ...
-
-// } // inline annotation
-
-let drawPoint = (point: Point) => {
-    // ...
-
- } 
-
-drawPoint({
-    x: 1,
-    y: 2
-})
+let point = new Point(); //Object --> instance of a class
+point.x = 1;
+point.y = 2;
+point.draw();
