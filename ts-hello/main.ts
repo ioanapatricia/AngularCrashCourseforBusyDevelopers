@@ -1,4 +1,6 @@
-let message;
-message = 'abc';
-let endsWithC = (<string>message).endsWith('c');
-let alternativeWay = (message as string).endsWith('c');
+let log = function(message) {
+    console.log(message);
+} //JS 
+
+let doLog = (message) => console.log(message); //TS
+ 
