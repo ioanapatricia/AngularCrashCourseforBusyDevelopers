@@ -1,6 +1,20 @@
-let log = function(message) {
-    console.log(message);
-} //JS 
+interface Point {
+    x: number,
+    y: number
+}
 
-let doLog = (message) => console.log(message); //TS
- 
+
+// let drawPoint = (point: { x: number, y: number}) => {
+    // ...
+
+// } // inline annotation
+
+let drawPoint = (point: Point) => {
+    // ...
+
+ } 
+
+drawPoint({
+    x: 1,
+    y: 2
+})
