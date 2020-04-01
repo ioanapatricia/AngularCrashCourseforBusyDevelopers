@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CourseComponent } from './course/course.component';
 import { CoursesComponent } from './courses.component';
+import { CoursesService } from './courses.service';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { CoursesComponent } from './courses.component';
       BrowserModule,
       AppRoutingModule
    ],
-   providers: [],
+   providers: [
+      CoursesService
+   ],
    bootstrap: [
       AppComponent
    ]
