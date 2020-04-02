@@ -4,14 +4,9 @@ import { CoursesService } from './courses.service';
 @Component({
     selector: 'app-courses',
     template: `
-            <button class="btn btn-primary">Save</button>
+            <button class="btn btn-primary" [class.active]="isActive">Save</button>
         `
 })
 export class CoursesComponent {
-    title = 'List of courses';
-    courses;
-
-    constructor(service: CoursesService) {
-        this.courses = service.getCourses();
-    }
+   isActive = false;
 }
