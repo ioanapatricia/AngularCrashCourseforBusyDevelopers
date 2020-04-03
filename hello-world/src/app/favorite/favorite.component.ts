@@ -1,14 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-favorite',
   templateUrl: './favorite.component.html',
-  styleUrls: ['./favorite.component.css'],
-  // tslint:disable-next-line: no-inputs-metadata-property
-  inputs: ['isFavorite']
+  styleUrls: ['./favorite.component.css']
 })
 export class FavoriteComponent implements OnInit {
- isFavorite: boolean;
+ // tslint:disable-next-line: no-input-rename
+ @Input('isFavorite') isSelected: boolean;
 
   constructor() { }
 
@@ -16,7 +15,7 @@ export class FavoriteComponent implements OnInit {
   }
 
   onClick() {
-    this.isFavorite = !this.isFavorite;
+    this.isSelected = !this.isSelected;
   }
 
 }
