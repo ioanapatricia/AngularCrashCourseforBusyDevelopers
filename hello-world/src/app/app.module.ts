@@ -13,6 +13,7 @@ import { SummaryPipe } from './summary.pipe';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { TitleCasePipe } from './title-case.pipe';
 import { CardComponent } from './card/card.component';
+import { LikeComponent } from './like/like.component';
 
 
 
@@ -27,7 +28,8 @@ import { CardComponent } from './card/card.component';
       SummaryPipe,
       FavoriteComponent,
       TitleCasePipe,
-      CardComponent
+      CardComponent,
+      LikeComponent
    ],
    imports: [
       BrowserModule,
