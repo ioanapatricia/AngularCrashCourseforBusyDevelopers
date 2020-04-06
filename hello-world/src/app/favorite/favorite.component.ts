@@ -3,19 +3,19 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-favorite',
   templateUrl: './favorite.component.html',
-  styleUrls: ['./favorite.component.css']
+  styleUrls: ['./favorite.component.css'],
+  styles: [
+    `
+    .fa {
+    color: green;
+  }
+    `
+  ]
 })
-export class FavoriteComponent implements OnInit {
- // tslint:disable-next-line: no-input-rename
+export class FavoriteComponent {
  @Input('isFavorite') isSelected: boolean;
- // tslint:disable-next-line: no-output-native
- // tslint:disable-next-line: no-output-rename
  @Output('change') click = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit() {
-  }
 
   onClick() {
     this.isSelected = !this.isSelected;
