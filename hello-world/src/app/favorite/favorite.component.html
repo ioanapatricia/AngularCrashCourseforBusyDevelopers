@@ -1,7 +1,9 @@
 <span 
   class="fa"
-  [class.fa-star]="isSelected"
-  [class.fa-star-o]="!isSelected" 
+  [ngClass]="{
+    'fa-star': isSelected,
+    'fa-star-o': !isSelected
+  }"
   (click)="onClick()">
 </span>
 
