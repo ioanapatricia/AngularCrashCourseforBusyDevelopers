@@ -14,6 +14,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { TitleCasePipe } from './title-case.pipe';
 import { CardComponent } from './card/card.component';
 import { LikeComponent } from './like/like.component';
+import { InputFormatDirective } from './input-format.directive';
 
 
 
@@ -29,7 +30,8 @@ import { LikeComponent } from './like/like.component';
       FavoriteComponent,
       TitleCasePipe,
       CardComponent,
-      LikeComponent
+      LikeComponent,
+      InputFormatDirective
    ],
    imports: [
       BrowserModule,
