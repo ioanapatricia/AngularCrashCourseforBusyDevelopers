@@ -15,6 +15,7 @@ import { TitleCasePipe } from './title-case.pipe';
 import { CardComponent } from './card/card.component';
 import { LikeComponent } from './like/like.component';
 import { InputFormatDirective } from './input-format.directive';
+import { ZippyComponent } from './zippy/zippy.component';
 
 
 
@@ -31,7 +32,8 @@ import { InputFormatDirective } from './input-format.directive';
       TitleCasePipe,
       CardComponent,
       LikeComponent,
-      InputFormatDirective
+      InputFormatDirective,
+      ZippyComponent
    ],
    imports: [
       BrowserModule,
