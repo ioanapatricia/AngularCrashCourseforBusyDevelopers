@@ -17,9 +17,6 @@ export class PostsComponent implements OnInit {
   ngOnInit() {
     this.service.getPosts().subscribe(response => {
       this.posts = response as any[];
-    }, error => {
-      alert('An unexpected error occurred.');
-      console.log(error);
     });
   }
 
@@ -35,8 +32,7 @@ export class PostsComponent implements OnInit {
       if (error instanceof BadInput) {
        // this.form.setErrors(error.originalError);
       } else {
-        alert('An unexpected error occurred.');
-        console.log(error);
+       throw error;
       }
     });
   }
@@ -44,9 +40,6 @@ export class PostsComponent implements OnInit {
   updatePost(post) {
     this.service.updatePost(post).subscribe(response => {
       console.log(response);
-    }, error => {
-      alert('An unexpected error occurred.');
-      console.log(error);
     });
   }
 
@@ -58,8 +51,7 @@ export class PostsComponent implements OnInit {
       if (error instanceof NotFoundError) {
         alert('This post has already been deleted.');
       } else {
-        alert('An unexpected error occurred.');
-        console.log(error);
+        throw error;
       }
     });
   }
