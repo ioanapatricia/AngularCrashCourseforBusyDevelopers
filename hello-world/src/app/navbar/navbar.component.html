@@ -2,8 +2,13 @@
   <div class="container">
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item" routerLinkActive="active current"><a [routerLink]="['/followers']" >Followers</a></li>
-        <li class="nav-item"  routerLinkActive="active current"><a [routerLink]="['/posts']">Posts</a></li>
+        <li class="nav-item" routerLinkActive="active current">
+          <a [routerLink]="['/followers']" 
+             [queryParams]="{ page: 1, order: 'newest' }">Followers</a>
+        </li>
+        <li class="nav-item"  routerLinkActive="active current">
+          <a [routerLink]="['/posts']">Posts</a>
+        </li>
       </ul>
     </div>
   </div>
